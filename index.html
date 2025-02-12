@@ -1,93 +1,81 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Prace Graficzne</title>
-  <!-- Link do zewnętrznego pliku CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twood Design - Meble z Drewna</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-  <!-- Przycisk przełączający motyw dzienny/nocny -->
-  <button class="theme-toggle" onclick="toggleTheme()">Tryb nocny</button>
+    <div id="particles-js"></div>
 
-  <!-- ============== NAGŁÓWEK ============== -->
-  <header id="main-header">
-    <div class="profile">
-      <!-- Zdjęcie profilowe (umieść obrazek w folderze assets) -->
-      <img src="assets/profile.jpg" alt="Profilowe">
-      <div class="info">Grafik</div>
-    </div>
-    <div class="contact-links">
-      <!-- Linki kontaktowe -->
-      <a href="mailto:example@example.com">Email</a>
-      <a href="tel:+48123456789">Telefon</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-    </div>
-    <!-- Interaktywny kafelek przekierowujący do strony z CV -->
-    <div class="cv-tile" onclick="window.location.href='https://pawelwyb.github.io/moje-cv/'">
-      Moje CV
-    </div>
-  </header>
+    <!-- Dark Mode -->
+    <button id="themeToggle" class="theme-toggle">
+        <span class="slider"></span>
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
 
-  <!-- ============== PANEL 1 ============== -->
-  <section class="panel left">
-    <h2>Marketing produktów</h2>
-    <div class="gallery-container" id="gallery1">
-      <!-- Nawigacja galerii -->
-      <div class="gallery-nav left" onclick="prevImage(1)">&#10094;</div>
-      <!-- Aktualnie wyświetlane zdjęcie -->
-      <img src="assets/marketing1.jpg" alt="Marketing 1">
-      <div class="gallery-nav right" onclick="nextImage(1)">&#10095;</div>
-    </div>
-  </section>
-  <div class="panel-description">Krótki opis zdjęć marketingowych. Zdjęcia ilustrują kreatywne projekty.</div>
+    <!-- Nagłówek -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Twood Design</h1>
+            <p class="subtitle">Unikatowe meble na zamówienie, idealne pod każdy wystrój.</p>
+            <div class="contact-info">
+                <span><i class="fas fa-envelope"></i>twood.design@wp.pl</span>
+                <span><i class="fas fa-phone"></i>782 138 372</span>
+                <a href="https://www.facebook.com/profile.php?id=61567010481184" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/twood.design/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
 
-  <!-- ============== PANEL 2 ============== -->
-  <section class="panel right">
-    <h2>Reklama internetowa</h2>
-    <div class="gallery-container" id="gallery2">
-      <div class="gallery-nav left" onclick="prevImage(2)">&#10094;</div>
-      <img src="assets/reklama1.jpg" alt="Reklama 1">
-      <div class="gallery-nav right" onclick="nextImage(2)">&#10095;</div>
-    </div>
-  </section>
-  <div class="panel-description">Krótkie opisy zdjęć z kampanii reklamowych. Wizualizacje innowacyjnych idei.</div>
+    <!-- Sekcja O Nas -->
+    <section class="section">
+        <div class="content-panel">
+            <h2>O Nas</h2>
+            <p>Cześć, jesteśmy Twood Design! 😊<br>
+                • Projekty na zamówienie – wykonamy każdy pomysł<br>
+                • Zobacz nasze aktualne produkty poniżej<br>
+                • Darmowa wycena – bez zobowiązań!<br>
+                Skontaktuj się z nami – chętnie pomożemy! 📞</p>
+        </div>
+    </section>
 
-  <!-- ============== PANEL 3 ============== -->
-  <section class="panel left">
-    <h2>Branding</h2>
-    <div class="gallery-container" id="gallery3">
-      <div class="gallery-nav left" onclick="prevImage(3)">&#10094;</div>
-      <img src="assets/branding1.jpg" alt="Branding 1">
-      <div class="gallery-nav right" onclick="nextImage(3)">&#10095;</div>
-    </div>
-  </section>
-  <div class="panel-description">Zdjęcia przedstawiające proces kreacji marki. Eleganckie projekty graficzne.</div>
+    <!-- Dostępne Produkty -->
+    <section class="section">
+        <div class="content-panel">
+            <h2>Dostępne Produkty</h2>
+            <div class="products-grid">
+                <!-- Przykładowe produkty -->
+                <div class="product-card" 
+                     data-image1="assets/products/stol1.jpg"
+                     data-image2="assets/products/stol1-2.jpg"
+                     data-image3="assets/products/stol1-3.jpg"
+                     data-image4="assets/products/stol1-4.jpg"
+                     data-description="Stół dębowy z żywicą epoksydową, wymiary 200x100cm">
+                    <img src="assets/products/stol1-thumb.jpg" alt="Stół Industrialny">
+                    <h3>Stół Industrialny</h3>
+                    <p>Cena: 2500 zł</p>
+                </div>
+                <!-- Dodaj więcej produktów tutaj -->
+            </div>
+        </div>
+    </section>
 
-  <!-- ============== PANEL 4 ============== -->
-  <section class="panel right">
-    <h2>Social Media</h2>
-    <div class="gallery-container" id="gallery4">
-      <div class="gallery-nav left" onclick="prevImage(4)">&#10094;</div>
-      <img src="assets/social1.jpg" alt="Social 1">
-      <div class="gallery-nav right" onclick="nextImage(4)">&#10095;</div>
-    </div>
-  </section>
-  <div class="panel-description">Zdjęcia kampanii w mediach społecznościowych. Nowoczesne i dynamiczne kreacje.</div>
+    <!-- Przed i Po -->
+    <section class="section">
+        <div class="content-panel">
+            <h2>Przed i Po</h2>
+            <div class="ai-slider-container">
+                <!-- Tutaj dodaj sekcję suwaka -->
+            </div>
+        </div>
+    </section>
 
-  <!-- ============== PANEL 5 ============== -->
-  <section class="panel left">
-    <h2>Druk i Opakowania</h2>
-    <div class="gallery-container" id="gallery5">
-      <div class="gallery-nav left" onclick="prevImage(5)">&#10094;</div>
-      <img src="assets/druk1.jpg" alt="Druk 1">
-      <div class="gallery-nav right" onclick="nextImage(5)">&#10095;</div>
-    </div>
-  </section>
-  <div class="panel-description">Przykłady projektów drukowanych materiałów i opakowań. Profesjonalne wykonanie.</div>
-
-  <!-- Łączenie zewnętrznego pliku JavaScript -->
-  <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
