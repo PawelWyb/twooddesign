@@ -1,81 +1,170 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twood Design - Meble z Drewna</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meble z litego drewna</title>
+  
+  <!-- Link do pliku CSS -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Czcionka Google (przykład: Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+  >
 </head>
 <body>
-    <div id="particles-js"></div>
 
-    <!-- Dark Mode -->
-    <button id="themeToggle" class="theme-toggle">
-        <span class="slider"></span>
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-    </button>
+  <!-- Sekcja hero (nagłówek) -->
+  <header class="hero-section">
+    <div class="hero-image">
+      <div class="logo">
+        <!-- Nazwa firmy / miejsce na logo -->
+        <h1>Miejsce na nazwę</h1>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#onas">O nas</a></li>
+        <li><a href="#produkty">Nasze Produkty</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Nagłówek -->
-    <header class="header">
-        <div class="header-content">
-            <h1>Twood Design</h1>
-            <p class="subtitle">Unikatowe meble na zamówienie, idealne pod każdy wystrój.</p>
-            <div class="contact-info">
-                <span><i class="fas fa-envelope"></i>twood.design@wp.pl</span>
-                <span><i class="fas fa-phone"></i>782 138 372</span>
-                <a href="https://www.facebook.com/profile.php?id=61567010481184" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/twood.design/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Sekcja O Nas -->
-    <section class="section">
-        <div class="content-panel">
-            <h2>O Nas</h2>
-            <p>Cześć, jesteśmy Twood Design! 😊<br>
-                • Projekty na zamówienie – wykonamy każdy pomysł<br>
-                • Zobacz nasze aktualne produkty poniżej<br>
-                • Darmowa wycena – bez zobowiązań!<br>
-                Skontaktuj się z nami – chętnie pomożemy! 📞</p>
-        </div>
+  <main>
+    <!-- Sekcja O nas -->
+    <section id="onas" class="onas-section">
+      <h2>O nas</h2>
+      <p>
+        Cześć, jesteśmy Miejsce na nazwę ! 😊 Tworzymy meble z litego drewna, które sprawiają że czujesz się jak w domu!<br>
+        • Projekty na zamówienie – wykonamy każdy pomysł<br>
+        • Zobacz nasze aktualne produkty poniżej<br>
+        • Darmowa wycena – bez zobowiązań!<br>
+        Skontaktuj się z nami – chętnie pomożemy! 📞
+      </p>
     </section>
 
-    <!-- Dostępne Produkty -->
-    <section class="section">
-        <div class="content-panel">
-            <h2>Dostępne Produkty</h2>
-            <div class="products-grid">
-                <!-- Przykładowe produkty -->
-                <div class="product-card" 
-                     data-image1="assets/products/stol1.jpg"
-                     data-image2="assets/products/stol1-2.jpg"
-                     data-image3="assets/products/stol1-3.jpg"
-                     data-image4="assets/products/stol1-4.jpg"
-                     data-description="Stół dębowy z żywicą epoksydową, wymiary 200x100cm">
-                    <img src="assets/products/stol1-thumb.jpg" alt="Stół Industrialny">
-                    <h3>Stół Industrialny</h3>
-                    <p>Cena: 2500 zł</p>
-                </div>
-                <!-- Dodaj więcej produktów tutaj -->
-            </div>
+    <!-- Sekcja Nasze Produkty -->
+    <section id="produkty" class="produkty-section">
+      <h2>Nasze Produkty</h2>
+
+      <!-- Produkt 1 -->
+      <div class="product-item">
+        <div class="product-text">
+          <h3>Nazwa Produktu 1</h3>
+          <p>Krótki opis produktu 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
+        <div class="product-image">
+          <img src="https://via.placeholder.com/400x300" alt="Produkt 1">
+        </div>
+      </div>
+
+      <!-- Produkt 2 -->
+      <div class="product-item reverse">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/400x300" alt="Produkt 2">
+        </div>
+        <div class="product-text">
+          <h3>Nazwa Produktu 2</h3>
+          <p>Krótki opis produktu 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <!-- Produkt 3 -->
+      <div class="product-item">
+        <div class="product-text">
+          <h3>Nazwa Produktu 3</h3>
+          <p>Krótki opis produktu 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="product-image">
+          <img src="https://via.placeholder.com/400x300" alt="Produkt 3">
+        </div>
+      </div>
+
+      <!-- Produkt 4 -->
+      <div class="product-item reverse">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/400x300" alt="Produkt 4">
+        </div>
+        <div class="product-text">
+          <h3>Nazwa Produktu 4</h3>
+          <p>Krótki opis produktu 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <!-- Produkt 5 -->
+      <div class="product-item">
+        <div class="product-text">
+          <h3>Nazwa Produktu 5</h3>
+          <p>Krótki opis produktu 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="product-image">
+          <img src="https://via.placeholder.com/400x300" alt="Produkt 5">
+        </div>
+      </div>
+
+      <!-- Produkt 6 -->
+      <div class="product-item reverse">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/400x300" alt="Produkt 6">
+        </div>
+        <div class="product-text">
+          <h3>Nazwa Produktu 6</h3>
+          <p>Krótki opis produktu 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <!-- Produkt 7 -->
+      <div class="product-item">
+        <div class="product-text">
+          <h3>Nazwa Produktu 7</h3>
+          <p>Krótki opis produktu 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="product-image">
+          <img src="https://via.placeholder.com/400x300" alt="Produkt 7">
+        </div>
+      </div>
+
+      <!-- Produkt 8 -->
+      <div class="product-item reverse">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/400x300" alt="Produkt 8">
+        </div>
+        <div class="product-text">
+          <h3>Nazwa Produktu 8</h3>
+          <p>Krótki opis produktu 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
     </section>
 
-    <!-- Przed i Po -->
-    <section class="section">
-        <div class="content-panel">
-            <h2>Przed i Po</h2>
-            <div class="ai-slider-container">
-                <!-- Tutaj dodaj sekcję suwaka -->
-            </div>
-        </div>
-    </section>
+    <!-- Sekcja Kontakt -->
+    <section id="kontakt" class="kontakt-section">
+      <h2>Kontakt</h2>
+      <form>
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" id="name" name="name" required>
 
-    <script src="script.js"></script>
+        <label for="email">Adres e-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Wiadomość</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Wyślij</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Miejsce na nazwę. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- Plik JavaScript (opcjonalnie, np. do płynnego przewijania) -->
+  <script src="script.js"></script>
 </body>
 </html>
