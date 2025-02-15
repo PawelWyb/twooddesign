@@ -5,101 +5,112 @@
   box-sizing: border-box;
 }
 
-/* Podstawowe ustawienia body */
+/* Ustawienia bazowe */
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
-  background-color: #FAF7F4; /* Jasne tło */
+  background-color: #f8f3f2; /* Nowy kolor tła */
 }
 
-/* Sekcja hero (nagłówek) */
-.hero-section {
+/* --- NAGŁÓWEK --- */
+.header-container {
   display: flex;
-  height: 80vh;
-  background-color: #2C3A37; /* Ciemniejsze tło (zielono-szare) */
+  width: 100%;
+  height: 70vh; /* Możesz dostosować wysokość */
 }
 
-/* Lewa część z tłem / zdjęciem w kształcie łuku */
-.hero-image {
-  flex: 2;
-  background: url('https://via.placeholder.com/800x600') no-repeat center center;
-  background-size: cover;
-  border-bottom-right-radius: 50% 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-/* Logo / nazwa firmy w hero */
-.hero-image .logo {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 20px 40px;
-  border-radius: 10px;
-}
-
-.hero-image .logo h1 {
-  color: #1A3C40;
-  font-size: 2rem;
-}
-
-/* Prawa część z nawigacją pionową */
-.main-nav {
-  flex: 1;
-  background-color: #2C3A37;
+/* Lewa część nagłówka */
+.left-nav {
+  width: 33%;
+  background-color: #213b3a; /* Nowy zielony */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.main-nav ul {
+.left-nav nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.main-nav li a {
-  color: #FAF7F4;
+.left-nav nav ul li a {
+  color: #f8f3f2;
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s;
 }
 
-.main-nav li a:hover {
-  color: #F2C14E; /* Akcent przy najechaniu */
+.left-nav nav ul li a:hover {
+  color: #e6dddb;
 }
 
-/* Główna część strony (sekcje) */
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+/* Prawa część nagłówka */
+.right-header {
+  width: 67%;
+  background-color: #e6dddb; /* Trochę ciemniejszy od #f8f3f2 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
 }
 
-/* Sekcja "O nas" */
-.onas-section {
-  margin-bottom: 60px;
-}
-
-.onas-section h2 {
-  font-size: 2rem;
-  color: #1A3C40;
+/* Nazwa strony – elegancka czcionka (Great Vibes) */
+.site-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #213b3a;
   margin-bottom: 20px;
 }
 
-.onas-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
+/* Obrazek w niestandardowym kształcie */
+.header-image img {
+  width: 300px; /* Możesz dostosować rozmiar */
+  height: 300px;
+  object-fit: cover;
+  /* Przykład clip-path (elipsa): */
+  clip-path: ellipse(70% 50% at 50% 50%);
+  /* Możesz eksperymentować z innymi kształtami: 
+     circle(), polygon() itp. */
 }
 
-/* Sekcja "Nasze Produkty" */
+/* --- SEKCJA O NAS --- */
+.onas-section {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.onas-content {
+  background-color: #213b3a; /* Zielony kafelek */
+  color: #f8f3f2;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.onas-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.onas-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- SEKCJA PRODUKTY --- */
+.produkty-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
 .produkty-section h2 {
   font-size: 2rem;
-  color: #1A3C40;
+  color: #213b3a;
   margin-bottom: 40px;
-  text-align: center;
 }
 
 .product-item {
@@ -107,15 +118,18 @@ main {
   align-items: center;
   margin-bottom: 40px;
   gap: 20px;
+  /* Dla lepszego wyróżnienia od tła można dodać np. box-shadow lub inny styl, 
+     ale tu zostawiamy minimalizm. */
 }
 
 .product-item .product-text {
   flex: 1;
+  text-align: left;
 }
 
 .product-item .product-text h3 {
   font-size: 1.5rem;
-  color: #1A3C40;
+  color: #213b3a;
   margin-bottom: 10px;
 }
 
@@ -141,12 +155,17 @@ main {
   flex-direction: row-reverse;
 }
 
-/* Sekcja Kontakt */
+/* --- SEKCJA KONTAKT --- */
+.kontakt-section {
+  background-color: #213b3a; /* Zielone tło */
+  color: #f8f3f2;
+  padding: 40px 20px;
+  text-align: center;
+}
+
 .kontakt-section h2 {
   font-size: 2rem;
-  color: #1A3C40;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .kontakt-section form {
@@ -155,11 +174,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: left;
 }
 
 .kontakt-section label {
   font-weight: 600;
-  color: #333;
+  color: #f8f3f2;
 }
 
 .kontakt-section input,
@@ -172,43 +192,41 @@ main {
 .kontakt-section button {
   padding: 12px;
   border: none;
-  background-color: #1A3C40;
-  color: #FAF7F4;
+  background-color: #f8f3f2;
+  color: #213b3a;
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .kontakt-section button:hover {
-  background-color: #F2C14E;
+  background-color: #e6dddb;
   color: #333;
 }
 
-/* Stopka */
+/* --- STOPKA --- */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #2C3A37;
-  color: #FAF7F4;
+  background-color: #213b3a;
+  color: #f8f3f2;
 }
 
-/* Responsywność */
+/* --- RESPONSYWNOŚĆ --- */
 @media (max-width: 768px) {
-  .hero-section {
+  .header-container {
     flex-direction: column;
     height: auto;
   }
 
-  .hero-image {
-    border-bottom-right-radius: 0;
+  .left-nav {
+    width: 100%;
+    height: auto;
   }
 
-  .main-nav {
-    flex-direction: row;
-  }
-
-  .main-nav ul {
-    flex-direction: row;
+  .right-header {
+    width: 100%;
+    height: auto;
   }
 
   .product-item {
